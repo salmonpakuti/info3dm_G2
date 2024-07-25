@@ -8,7 +8,6 @@ import pandas as pd
 
 df = pd.read_csv('winequality-white-re.csv')
 
-max_score = 0
 
 x = df.iloc[:,0:10]
 x=pd.DataFrame(df[["residual sugar","free sulfur dioxide","total sulfur dioxide","alcohol"]])
