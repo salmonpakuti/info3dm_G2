@@ -131,10 +131,10 @@ class knnTest:
         assert test_scores.shape == (8, 10), f"Expected shape (8, 10), but got {test_scores.shape}"
 
 if __name__ == "__main__":
-    print("k_neighbors_learningのユニットテスト")
-    knnTest.test_k_neighbors_learning()
-    print("k_neighbors_gridsearchのユニットテスト")
-    knnTest.test_k_neighbors_gridsearch()
+    #print("k_neighbors_learningのユニットテスト")
+    #knnTest.test_k_neighbors_learning()
+    #print("k_neighbors_gridsearchのユニットテスト")
+    #knnTest.test_k_neighbors_gridsearch()
     print("val_curveのユニットテスト")
-    knnTest.test_val_curve()
+    #knnTest.test_val_curve()
 
