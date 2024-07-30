@@ -8,42 +8,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 
-<<<<<<< HEAD
 max_score=0
-=======
-        file_path="ファイルパス"
-        df = pd.read_csv(file_path,encoding="shift-jis")
-        #そのままの特徴量
-        #x=pd.DataFrame(df[["fixed acidity","volatile acidity","citric acid","residual sugar","chlorides","free sulfur dioxide","total sulfur dioxide","density","pH","sulphates","alcohol"]])
-        #pca後の特徴量
-        #x=pd.DataFrame(df[["residual sugar","free sulfur dioxide","total sulfur dioxide","alcohol"]])
-        #umap後の特徴量
-        x=pd.DataFrame(df[["fixed acidity","volatile acidity","chlorides","total sulfur dioxide","density","alcohol"]])
-        y=pd.DataFrame(df[["quality"]])
-        model=KNeighborsClassifier()
-
-        def k_neighbors_learning(a,b):
-                """_summary_：k近傍法でワインの品質を学習を行い、精度を出力するメソッド
-                Args:
-                    a (dataframe): 特徴量
-                    b (dataframe): 正解ラベル
-                """
-                #XとYを学習データとテストデータに分割
-                X_train,X_test,Y_train,Y_test = train_test_split(a,b, test_size=0.3, shuffle=True, random_state=3, stratify=b)
-                Y_train=np.reshape(Y_train,(-1))
-                Y_test=np.reshape(Y_test,(-1))
-
-                model = KNeighborsClassifier(
-                        n_neighbors=22,
-                        weights="uniform",
-                        algorithm="auto",
-                        metric="canberra"
-                        #p=1
-                        ) 
-                model.fit(X_train,Y_train)
-                Y_pred_tree=model.predict(X_test)
-                print(f'正解率: {accuracy_score(Y_test, Y_pred_tree)}')
->>>>>>> ce95bdb (recommit^^)
 
 
 file_path="winequality-white-re.csv"
