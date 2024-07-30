@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 class knnTest:
     """_summary_
     このクラスは、k-nn-experimentのユニットテストを行うクラスです。
+
     """
 
     @classmethod
@@ -25,7 +26,8 @@ class knnTest:
     @classmethod
     def test_k_neighbors_learning(cls):
         """
-        k_neighbors_learning 関数のテストを行うメソッド。正解率が出力されることを確認する。
+        k_neighbors_learning 関数のテストを行うメソッド。正解率 (accuracy) が出力されることを確認する。
+
         """
         X, y = cls.generate_test_data()
         
@@ -45,6 +47,10 @@ class knnTest:
     def test_k_neighbors_gridsearch(cls):
         """
         k_neighbors_gridsearch 関数のテストを行うメソッド
+        best_param:最適なパラメータ
+        best_model:最適なモデル
+        max_scores:最高精度
+
         """
         X, y = cls.generate_test_data()
         
@@ -111,6 +117,9 @@ class knnTest:
     def test_val_curve(cls):
         """
         val_curve 関数のテストを行うメソッド。（可視化のテストは難しいため、データが生成されるかどうかの確認を行う）
+        estimator:検証曲線を描写するモデル
+        param_name(str):検証曲線を描写したいパラメータ名
+        param_range:確認したいパラメータの値
         """
         X, y = cls.generate_test_data()
         
