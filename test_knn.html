@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>test_knn</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/yuna/helloo/test_knn.py">/Users/yuna/helloo/test_knn.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/yuna/helloo/info3dm_G2/test_knn.py">/Users/yuna/helloo/info3dm_G2/test_knn.py</a></font></td></tr></table>
     <p></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -51,11 +51,17 @@
 X:特徴量<br>
 y:正解ラベル</tt></dd></dl>
 
-<dl><dt><a name="knnTest-test_k_neighbors_gridsearch"><strong>test_k_neighbors_gridsearch</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>k_neighbors_gridsearch&nbsp;関数のテストを行うメソッド</tt></dd></dl>
+<dl><dt><a name="knnTest-test_k_neighbors_gridsearch"><strong>test_k_neighbors_gridsearch</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>k_neighbors_gridsearch&nbsp;関数のテストを行うメソッド<br>
+best_param:最適なパラメータ<br>
+best_model:最適なモデル<br>
+max_scores:最高精度</tt></dd></dl>
 
-<dl><dt><a name="knnTest-test_k_neighbors_learning"><strong>test_k_neighbors_learning</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>k_neighbors_learning&nbsp;関数のテストを行うメソッド。正解率が出力されることを確認する。</tt></dd></dl>
+<dl><dt><a name="knnTest-test_k_neighbors_learning"><strong>test_k_neighbors_learning</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>k_neighbors_learning&nbsp;関数のテストを行うメソッド。正解率&nbsp;(accuracy)&nbsp;が出力されることを確認する。</tt></dd></dl>
 
-<dl><dt><a name="knnTest-test_val_curve"><strong>test_val_curve</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>val_curve&nbsp;関数のテストを行うメソッド。（可視化のテストは難しいため、データが生成されるかどうかの確認を行う）</tt></dd></dl>
+<dl><dt><a name="knnTest-test_val_curve"><strong>test_val_curve</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>val_curve&nbsp;関数のテストを行うメソッド。<br>
+estimator:検証曲線を描写するモデル<br>
+param_name(str):検証曲線を描写したいパラメータ名<br>
+param_range:確認したいパラメータの値</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
@@ -67,4 +73,3 @@ Data descriptors defined here:<br>
 </dl>
 </td></tr></table></td></tr></table>
 </body></html>
-

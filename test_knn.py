@@ -116,7 +116,7 @@ class knnTest:
     @classmethod
     def test_val_curve(cls):
         """
-        val_curve 関数のテストを行うメソッド。（可視化のテストは難しいため、データが生成されるかどうかの確認を行う）
+        val_curve 関数のテストを行うメソッド。
         estimator:検証曲線を描写するモデル
         param_name(str):検証曲線を描写したいパラメータ名
         param_range:確認したいパラメータの値
@@ -130,6 +130,23 @@ class knnTest:
                 X=a, y=b,
                 param_name="n_neighbors",
                 param_range=param_range, cv=10)
+            train_mean = np.mean(train_scores, axis=1)
+            train_std = np.std(train_scores, axis=1)
+            test_mean = np.mean(test_scores, axis=1)
+            test_std = np.std(test_scores, axis=1)
+            plt.figure(figsize=(8, 6))
+            plt.plot(param_range, train_mean, marker='o', label='Train accuracy')
+            plt.fill_between(param_range, train_mean + train_std, train_mean - train_std, alpha=0.2)
+            plt.plot(param_range, test_mean, marker='s', linestyle='--', label='Validation accuracy')
+            plt.fill_between(param_range, test_mean + test_std, test_mean - test_std, alpha=0.2)
+            plt.grid()
+            plt.xscale('log')
+            plt.title('Validation curve (test)', fontsize=16)
+            plt.xlabel('n_neighbors', fontsize=12)
+            plt.ylabel('Accuracy', fontsize=12)
+            plt.legend(fontsize=12)
+            plt.ylim([0.1, 1.05])
+            plt.show()
             
             return train_scores, test_scores
         
