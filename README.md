@@ -37,5 +37,3 @@ k-nn-experiment.htmlはソースの詳細を記している．
 ## 作者
 Contributors
 
-## ライセンス
-This project is licensed under the [MIT License](LICENSE).
