@@ -8,12 +8,13 @@
 私たちは．kaggleで公開されているwine-quality-whiteを用いました．次元数は12個．データ数は4899個あります．
 
 ## 動作環境
-python 3.9.6
-matplotlib 3.8.4
-numpy 1.26.4
-pandas 2.2.2
-pytest 8.3.1
-scikit-learn 1.4.2
+Macで動作確認。
+- python 3.9.6
+- matplotlib 3.8.4
+- numpy 1.26.4
+- pandas 2.2.2
+- pytest 8.3.1
+- scikit-learn 1.4.2
 
 
 ## 使用方法
