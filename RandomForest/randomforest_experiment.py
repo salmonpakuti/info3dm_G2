@@ -14,7 +14,29 @@ def train_and_evaluate_rf_model(data_path):
     # トレーニングデータとテストデータに分割（80% トレーニング、20% テスト）
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
 
-    # ランダムフォレストモデルの作成
+    '''
+    # グリットサーチ
+    from sklearn.model_selection import GridSearchCV
+
+    # 検証したいパラメータの指定
+    search_gs = {
+    "max_depth": [None, 5, 25, 100],
+    "n_estimators":[100, 150, 180, 200],
+    "min_sammax_leaf_nodes": [None, 10, 30],
+    }
+
+    model_gs = RandomForestClassifier()
+    # グリットサーチの設定
+    gs = GridSearchCV(model_gs,
+                    search_gs,
+                    cv = 5)
+    # 学習
+    gs.fit(X_train, y_train)
+    # 最適なパラメータの表示
+    print(gs.best_params_)
+    '''
+
+    # ランダムフォレストモデルの作成, パラメータ設定
     rf_model = RandomForestClassifier(n_estimators=180, max_depth=None, max_leaf_nodes=None, min_samples_split=4)
 
     # モデルの訓練

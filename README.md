@@ -30,6 +30,10 @@ svc_experiment.htmlはソースの詳細を記している．
 k-nn-experiment.htmlはソースの詳細を記している．
 まず．データセットをfilepathに格納する．次に．k_neighbors_learningのパラメータ．k_neighbors_gridsearchの探索範囲のパラメータ．val_curve関数内の検証曲線を描写したいパラメータとパラメータのとる値を設定する．最後にファイルを実行すると．精度．最適パラメータと最適パラメータでの精度．検証曲線が描写される．k-nn-experimentのユニットテストは．test_knnによって行なった．
 
+### randomforest_experiment
+まず，データセットをdata_pathに格納する．次に，RandomForestClassifierのパラメータ（n_estimators，max_depth，max_leaf_nodes=None，min_samples_split）を設定する．最後に，train_and_evaluate_rf_model(data_path)として実行すれば、精度が表示される．randomforest_experimentのユニットテストは，test_randamforest.pyによって行った。
+
+
 ## 作者
 Contributors
 
