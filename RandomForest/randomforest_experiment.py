@@ -25,16 +25,14 @@ def train_and_evaluate_rf_model(data_path):
 
     # モデルの評価
     accuracy = accuracy_score(y_test, y_pred)
-    conf_matrix = confusion_matrix(y_test, y_pred)
     class_report = classification_report(y_test, y_pred)
 
     # 結果の表示
     print("Accuracy:", accuracy)
-    print("Confusion Matrix:\n", conf_matrix)
     print("Classification Report:\n", class_report)
 
-    return accuracy, conf_matrix, class_report
+    return accuracy, class_report
 
 # 関数の呼び出し
-data_path = "winequality-white.csv"
+data_path = "winequality-white-re.csv"
 train_and_evaluate_rf_model(data_path)
